@@ -1,0 +1,42 @@
+<div class="container mt-5">
+    <table class="table table-bordered table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">UserName</th>
+          <th scope="col">Name</th>
+          <th scope="col">Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          
+          <td>
+            <button class="btn btn-primary">Edit</button>
+            <button class="btn btn-danger ">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          
+          <td>
+            <button class="btn btn-primary btn-action" onclick="editRow(this)">Edit</button>
+            <button class="btn btn-danger btn-action" onclick="deleteRow(this)">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td colspan="2">Larry the Bird</td>
+          <td>
+            <button class="btn btn-primary btn-action" onclick="editRow(this)">Edit</button>
+            <button class="btn btn-danger btn-action" onclick="deleteRow(this)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
