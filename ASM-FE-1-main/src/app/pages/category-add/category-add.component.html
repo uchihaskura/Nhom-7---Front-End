@@ -1,0 +1,20 @@
+<div class="container">
+    <h2>Add Category</h2>
+    <form> <br>
+        <div class="form-group">
+            <label>Name category</label>
+            <input type="text" class="form-control" name="name" [(ngModel)]= "categori.name">
+            
+        </div> <br>
+        <div class="form-group">
+            <label>Image</label>
+            <input type="file" class="form-control" name="image" [(ngModel)]="categori.image">
+        </div> <br>
+        <button type="submit" class="btn btn-danger" (click)="addCategory()">Add</button>
+    </form>
+</div>
+
+
+
+
+

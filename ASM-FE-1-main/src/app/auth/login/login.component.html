@@ -1,0 +1,67 @@
+<nb-layout>
+  <nb-layout-column>
+    <nb-card>
+      <nb-card-body>
+        <div class="container">
+          <h1 id="title" class="title">Đăng nhập</h1>
+          <ngx-alerts [messages]="alertMessages"></ngx-alerts>
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" aria-labelledby="title">
+            <div class="form-control-group mb-3">
+              <label class="label" for="email">Email:</label>
+              <input nbInput
+                     fullWidth
+                     name="email"
+                     formControlName="email"
+                     required
+                     id="email"
+                     pattern=".+@.+\..+"
+                     placeholder="Email address"
+                     class="form-control"
+                     status="success"
+                     autofocus>
+              <div
+                *ngIf="loginForm.get('email').invalid && (loginForm.get('email').dirty || loginForm.get('email').touched)">
+                <small *ngIf="loginForm.get('email').hasError('required')">
+                  <i class="text-danger">Vui lòng nhập email.</i>
+                </small>
+                <small *ngIf="loginForm.get('email').hasError('pattern')">
+                  <i class="text-danger">Email chưa đúng định dạng.</i>
+                </small>
+              </div>
+            </div>
+
+            <div class="form-control-group mb-3">
+              <label class="label" for="password">Mật khẩu:</label>
+              <input nbInput
+                     formControlName="password"
+                     required
+                     name="password"
+                     fullWidth
+                     status="success"
+                     id="password"
+                     placeholder="Mật khẩu"
+                     type="password"
+                     class="form-control">
+              <div
+                *ngIf="loginForm.get('password').invalid && (loginForm.get('password').dirty || loginForm.get('password').touched)">
+                <small *ngIf="loginForm.get('password').hasError('required')">
+                  <i class="text-danger">Vui lòng nhập mật khẩu.</i>
+                </small>
+              </div>
+            </div>
+
+            <div class="form-control-group remember accept-group  mb-3">
+              <nb-checkbox name="rememberMe" status="success">Ghi nhớ tôi?</nb-checkbox>
+            </div>
+            <button nbButton type="submit" class="mb-3" [disabled]="!loginForm.valid" status="success">Đăng nhập
+            </button>
+          </form>
+
+          <div class="form-control-group accept-group ">
+            <a class="forgot-password" routerLink="../request-password">Quên mật khẩu?</a>
+          </div>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </nb-layout-column>
+</nb-layout>

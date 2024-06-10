@@ -1,0 +1,35 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "importHelpers": true,
+    "module": "es2020",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "target": "es2015",
+    "baseUrl": "src",
+    "paths": {
+      "@core/*": [
+        "app/core/*"
+      ],
+      "@module/*": [
+        "app/module/*"
+      ],
+      "@environments/*": [
+        "environments/*"
+      ]
+    },
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "plugins": [
+      { "name": "tslint-language-service"}
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+<div class="card">
+    <div class="card-header">
+        <h2 class="card-title">List Title</h2><br>
+        <button class="btn btn-danger" (click)=" addNew()" >Add Title</button>
+        <br>
+    </div>
+
+<table id="example1" class="table table-bordered table-striped dataTable dtr-inline">
+    <thead>
+        <tr>
+            <th class="sorting sorting_asc">ID</th>
+            <th class="sorting">Image</th>
+            <th class="sorting">Title</th>
+            <th class="sorting">Categori</th>
+            <th class="sorting">Poster</th>
+            <th class="sorting">posting date</th>
+            <th class="sorting">Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor=" let item of title">
+            <td>{{item.id}}</td>
+            <td class="product-thumbnail">
+                <img src="{{item.image}}" alt="{{item.name}}" class="h-50 w-50" style="width: 30px; height: 30px;">
+            </td>
+            <td>{{item.title}}</td>
+            <td>{{item.categori}}</td>
+            <td>{{item.poster}}</td>
+            <td>{{item.date}}</td>
+            <td>
+                <form action="" method="POST" class="edit-form" id="editForm">
+                    <button type="submit" name="edit" class="btn btn-primary m-2"><i
+                            class='fas fa-trash-alt'>Edit</i></button>
+                </form>
+                <form action="" method="POST" class="delete-form" id="deleteForm">
+                    <button type="submit" name="delete" class="btn btn-danger m-2"><i
+                            class='fas fa-trash-alt' (click)="deleteTitle(item.id)">Delete</i></button>
+                </form>
+
+            </td>
+        </tr>
+        
+    </tbody>
+</table>

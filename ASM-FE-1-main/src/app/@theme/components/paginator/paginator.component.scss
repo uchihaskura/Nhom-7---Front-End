@@ -1,0 +1,31 @@
+.custom-paginator {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0.5rem 0;
+
+  .paginator-page {
+    margin: 0 0.5rem;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .size-page {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  button:focus {
+    outline: none;
+  }
+
+  button.paginator-action {
+    width: 43px;
+    height: 43px;
+    color: #0073C0;
+  }
+}
+
