@@ -1,0 +1,41 @@
+
+.container {
+  width: 100%;
+  max-width: 500px;
+
+  a {
+    text-decoration: none;
+    color: #00D68F;
+  }
+
+  .form-control {
+    max-width: 500px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .label {
+    text-align: left;
+    padding-bottom: 5px;
+    display: block;
+  }
+
+  .remember {
+    text-align: left;
+  }
+}
+
+nb-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95%;
+}
+
+nb-card-body {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
